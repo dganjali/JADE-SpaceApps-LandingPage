@@ -1,0 +1,99 @@
+openapi: 3.0.3
+info:
+  title: JADE SpaceApps Mock API
+  version: '0.1.0'
+paths:
+  /api/v1/predict_rul:
+    post:
+      summary: Predict Remaining Useful Life
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PredictRequest'
+      responses:
+        '200':
+          description: RUL Response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PredictResponse'
+  /api/v1/compute_thruster_vector:
+    post:
+      summary: Compute thruster vector from relative pose
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DockRequest'
+      responses:
+        '200':
+          description: Thruster vector
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DockResponse'
+components:
+  schemas:
+    TelemetrySample:
+      type: object
+      properties:
+        timestamp:
+          type: string
+        voltage:
+          type: number
+        current:
+          type: number
+        temp_c:
+          type: number
+        charge_cycles:
+          type: integer
+      required: [timestamp, voltage, current, temp_c, charge_cycles]
+    PredictRequest:
+      type: object
+      properties:
+        agent_id:
+          type: string
+        series:
+          type: array
+          items:
+            $ref: '#/components/schemas/TelemetrySample'
+      required: [agent_id, series]
+    PredictResponse:
+      type: object
+      properties:
+        rul_hours:
+          type: number
+        failure_prob:
+          type: number
+        anomalies:
+          type: array
+          items:
+            type: object
+        confidence:
+          type: number
+    DockRequest:
+      type: object
+      properties:
+        relative_pos:
+          type: array
+          items:
+            type: number
+        relative_vel:
+          type: array
+          items:
+            type: number
+        vision_lock:
+          type: boolean
+      required: [relative_pos]
+    DockResponse:
+      type: object
+      properties:
+        thruster_vector:
+          type: array
+          items:
+            type: number
+        alignment_state:
+          type: string

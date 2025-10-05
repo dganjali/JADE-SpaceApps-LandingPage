@@ -1,0 +1,186 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #__next {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: linear-gradient(180deg, #0A0E16 0%, #111A27 100%);
+  color: #E6EDF7;
+  font-family: var(--font-inter), Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Neon glow effect for cyan elements */
+.neon {
+  text-shadow: 0 0 8px rgba(0, 255, 255, 0.6), 0 0 18px rgba(0, 255, 255, 0.2);
+}
+
+/* Neon glow animation */
+@keyframes neon-pulse {
+  0%, 100% {
+    text-shadow: 0 0 8px rgba(0, 255, 255, 0.6), 0 0 18px rgba(0, 255, 255, 0.2);
+  }
+  50% {
+    text-shadow: 0 0 12px rgba(0, 255, 255, 0.8), 0 0 24px rgba(0, 255, 255, 0.4);
+  }
+}
+
+.neon-pulse {
+  animation: neon-pulse 2s ease-in-out infinite;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0A0E16;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1B2333;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00FFFF;
+}
+
+/* Utility classes for space-industrial aesthetic */
+.gradient-nebula {
+  background: linear-gradient(90deg, #182743, #1E2C4D, #2D3F69);
+}
+
+.gradient-deep-space {
+  background: linear-gradient(180deg, #0A0E16 0%, #111A27 100%);
+}
+
+.gradient-orbit-blue {
+  background: linear-gradient(180deg, #111A27 0%, #1B2333 100%);
+}
+
+/* Glow effects */
+.glow-cyan {
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.3), 0 0 20px rgba(0, 255, 255, 0.1);
+}
+
+.glow-orange {
+  box-shadow: 0 0 10px rgba(255, 126, 46, 0.3), 0 0 20px rgba(255, 126, 46, 0.1);
+}
+
+/* Button hover effects */
+.btn-outline-cyan {
+  @apply border-2 border-neonCyan text-neonCyan px-6 py-3 rounded-lg transition-all duration-300;
+}
+
+.btn-outline-cyan:hover {
+  @apply bg-neonCyan text-deepSpace shadow-[0_0_20px_rgba(0,255,255,0.5)];
+}
+
+/* Technical UI panel style */
+.tech-panel {
+  @apply bg-orbitBlue/30 border border-neonCyan/30 rounded-lg p-4;
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-padding-top: 2rem;
+}
+
+/* Card hover animations */
+@keyframes card-float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+/* Gradient text animation */
+@keyframes gradient-shift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #00FFFF, #39FF14, #FF7E2E, #00FFFF);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient-shift 3s ease infinite;
+}
+
+/* Shimmer effect */
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+.shimmer {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(0, 255, 255, 0.1) 50%,
+    transparent 100%
+  );
+  background-size: 1000px 100%;
+  animation: shimmer 3s infinite;
+}
+
+/* Grid pattern for sections */
+.grid-pattern {
+  background-image: 
+    linear-gradient(rgba(0, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+/* Dot pattern for sections */
+.dot-pattern {
+  background-image: radial-gradient(circle, rgba(0, 255, 255, 0.1) 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+
+/* Animated underline for section headers */
+.animated-underline {
+  position: relative;
+  display: inline-block;
+}
+
+.animated-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #00FFFF, #39FF14);
+  transition: width 0.5s ease;
+}
+
+.animated-underline:hover::after {
+  width: 100%;
+}
