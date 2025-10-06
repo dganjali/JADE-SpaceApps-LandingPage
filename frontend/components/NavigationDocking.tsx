@@ -61,21 +61,16 @@ export default function NavigationDocking() {
               <h3 className="text-3xl font-orbitron font-bold text-white">Propulsion System</h3>
             </div>
 
-            {/* Gazebo Simulation Video Placeholder */}
-            <div className="relative aspect-video bg-gradient-to-br from-deepSpace to-orbitBlue rounded-xl overflow-hidden mb-6 border border-thrusterOrange/30 group cursor-pointer">
-              <div className="absolute inset-0 flex flex-col items-center justify-center">
-                <Rocket className="w-20 h-20 text-thrusterOrange/40 mb-4" />
-                <span className="text-sm text-white/60 font-mono">GAZEBO_SIMULATION</span>
-                <span className="text-xs text-white/40 mt-2">Orbital Maneuvering Demo</span>
-              </div>
-              {/* Play Overlay */}
-              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all flex items-center justify-center">
-                <div className="opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:scale-110">
-                  <div className="w-16 h-16 rounded-full bg-thrusterOrange/90 flex items-center justify-center animate-pulse">
-                    <Play className="w-8 h-8 text-white ml-1" fill="white" />
-                  </div>
-                </div>
-              </div>
+            {/* Gazebo Simulation Video */}
+            <div className="relative aspect-video bg-gradient-to-br from-deepSpace to-orbitBlue rounded-xl overflow-hidden mb-6 border border-thrusterOrange/30">
+              <video 
+                className="w-full h-full object-cover"
+                controls
+                preload="metadata"
+              >
+                <source src="/videos/gazebo.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
             </div>
 
             <div className="space-y-3 text-white/90">
