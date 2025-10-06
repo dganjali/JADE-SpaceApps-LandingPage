@@ -95,9 +95,9 @@ export default function MarketBusiness() {
                   <Satellite className="w-12 h-12 text-neonCyan group-hover:rotate-12 transition-transform" />
                 </div>
               </div>
-              <h4 className="text-xl font-semibold text-white mb-3 relative z-10">Commercial Operators</h4>
+              <h4 className="text-xl font-semibold text-white mb-3 relative z-10">Commercial Satellite Operators</h4>
               <p className="text-sm text-softWhite relative z-10">
-                Companies running communication, navigation, or Earth observation satellites. Subscription services for efficient fleet management.
+                Companies running communication, navigation, or Earth observation satellites. Subscription-based services allow them to maintain large fleets efficiently.
               </p>
             </div>
 
@@ -110,7 +110,7 @@ export default function MarketBusiness() {
               </div>
               <h4 className="text-xl font-semibold text-white mb-3 relative z-10">Government Agencies</h4>
               <p className="text-sm text-softWhite relative z-10">
-                NASA, ESA, CSA requiring continuous operation for research, defense, and environmental monitoring.
+                Space agencies such as NASA, ESA, or the Canadian Space Agency that require continuous satellite operation for research, defense, and environmental monitoring.
               </p>
             </div>
 
@@ -123,52 +123,31 @@ export default function MarketBusiness() {
               </div>
               <h4 className="text-xl font-semibold text-white mb-3 relative z-10">Satellite Constellations</h4>
               <p className="text-sm text-softWhite relative z-10">
-                Large LEO networks (Starlink, OneWeb) with hundreds or thousands of satellites requiring ongoing maintenance.
+                Large LEO networks (e.g., Starlink, OneWeb) benefit from ongoing maintenance across hundreds or thousands of satellites, making subscriptions ideal for predictable coverage.
               </p>
             </div>
           </div>
         </div>
 
-        {/* Subscription Tiers */}
+        {/* Revenue Model */}
         <div className="market-item mb-16">
-          <h3 className="text-3xl font-orbitron font-bold text-center text-softWhite mb-8">Subscription Tiers</h3>
-          <div className="grid md:grid-cols-3 gap-6">
-            {tiers.map((tier, idx) => (
-              <div
-                key={idx}
-                className={`group bg-orbitBlue/40 backdrop-blur-sm rounded-xl p-8 border-2 ${tier.borderColor} ${tier.bgColor} transition-all hover:scale-105 hover:shadow-2xl relative overflow-hidden ${idx === 1 ? 'md:-translate-y-2 border-4' : ''}`}
-              >
-                {/* Best value badge for Pro tier */}
-                {idx === 1 && (
-                  <div className="absolute top-4 right-4 bg-successGreen text-deepSpace text-xs font-bold px-3 py-1 rounded-full animate-pulse">
-                    MOST POPULAR
-                  </div>
-                )}
-                
-                <div className="absolute inset-0 shimmer opacity-0 group-hover:opacity-100 transition-opacity" />
-                
-                <div className="text-center mb-6 relative z-10">
-                  <div className={`w-16 h-16 mx-auto mb-4 rounded-full bg-${tier.color}/20 flex items-center justify-center`}>
-                    <span className={`text-3xl font-bold text-${tier.color}`}>{idx + 1}</span>
-                  </div>
-                  <h4 className={`text-2xl font-orbitron font-bold text-${tier.color} uppercase mb-2`}>
-                    {tier.name}
-                  </h4>
-                </div>
-                <ul className="space-y-3 text-softWhite relative z-10">
-                  {tier.features.map((feature, i) => (
-                    <li key={i} className="flex items-start gap-2 hover:translate-x-1 transition-transform">
-                      <span className={`text-${tier.color} mt-1 font-bold`}>✓</span>
-                      <span className="text-sm">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
+          <h3 className="text-3xl font-orbitron font-bold text-center text-softWhite mb-8">Revenue Model – Subscription-Based</h3>
+          <div className="bg-orbitBlue/40 backdrop-blur-sm rounded-xl p-8 border border-neonCyan/30 max-w-4xl mx-auto">
+            <ul className="space-y-4 text-softWhite leading-relaxed">
+              <li className="flex items-start gap-3">
+                <span className="text-neonCyan text-xl mt-1">•</span>
+                <span>Operators pay an <strong className="text-neonCyan">annual or multi-year subscription fee</strong> that covers a set number of maintenance missions and monitoring services.</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-successGreen text-xl mt-1">•</span>
+                <span>Subscriptions can be <strong className="text-successGreen">tiered based on the size of the satellite fleet</strong>, number of repairs included, and priority service levels.</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-thrusterOrange text-xl mt-1">•</span>
+                <span>This model ensures <strong className="text-thrusterOrange">predictable revenue</strong> for the company while giving operators cost certainty and reliable access to satellite servicing.</span>
+              </li>
+            </ul>
           </div>
-          <p className="text-center text-mutedGray mt-8 text-sm">
-            Annual or multi-year subscriptions ensure predictable revenue and cost certainty for operators
-          </p>
         </div>
 
         {/* Sustainability Approach */}
@@ -182,7 +161,7 @@ export default function MarketBusiness() {
                 Environmental
               </h4>
               <p className="text-sm text-softWhite leading-relaxed">
-                Extending satellite lifespans reduces replacement launches, lowering rocket emissions and minimizing space debris in LEO.
+                Extending satellite lifespans reduces the need for replacement launches, lowering rocket emissions and minimizing space debris in LEO.
               </p>
             </div>
 
@@ -193,7 +172,7 @@ export default function MarketBusiness() {
                 Economic
               </h4>
               <p className="text-sm text-softWhite leading-relaxed">
-                Subscription services provide cost-effective alternatives to replacement satellites, helping operators manage budgets and reduce financial risk.
+                Subscription services provide a cost-effective alternative to replacement satellites, helping operators manage budgets and reduce financial risk.
               </p>
             </div>
 
@@ -204,7 +183,7 @@ export default function MarketBusiness() {
                 Operational
               </h4>
               <p className="text-sm text-softWhite leading-relaxed">
-                Robot docks back to recharge and replenish fuel, enabling multiple maintenance cycles without additional launches or generating debris.
+                The robot docks back onto the host or nearby satellites to recharge and replenish propulsion fuel, enabling multiple maintenance cycles without additional launches or generating debris.
               </p>
             </div>
           </div>

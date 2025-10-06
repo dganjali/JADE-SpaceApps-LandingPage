@@ -45,16 +45,16 @@ export default function Impact() {
             </div>
             <ul className="space-y-4 text-gray-700 leading-relaxed">
               <li>
-                <strong className="text-successGreen">Up to $1 billion saved</strong> per satellite by enabling repairs instead of replacements
+                Each satellite can cost <strong className="text-successGreen">up to $1 billion</strong> to design, build, and launch. A single failed satellite represents a major financial loss.
               </li>
               <li>
-                <strong className="text-successGreen">5–10 year lifespan extension</strong> through battery replacements, mechanical repairs, and panel adjustments
+                By repairing satellites in orbit, our system reduces the need to manufacture replacement satellites, <strong className="text-successGreen">saving millions of dollars per incident</strong>.
               </li>
               <li>
-                Maximizes return on investment for satellite operators
+                <strong className="text-successGreen">Extending satellite lifespans by 5–10 years</strong> through battery replacements, mechanical repairs, and panel adjustments maximizes the return on investment for satellite operators.
               </li>
               <li>
-                Makes satellite operations more sustainable and financially feasible for companies and governments
+                This cost-saving approach makes satellite operations more sustainable and financially feasible for companies and governments.
               </li>
             </ul>
           </div>
@@ -69,16 +69,16 @@ export default function Impact() {
             </div>
             <ul className="space-y-4 text-gray-700 leading-relaxed">
               <li>
-                Targeted, <strong className="text-neonCyan">in-orbit maintenance</strong> ensures satellites remain fully operational
+                Satellite failures currently lead to <strong className="text-neonCyan">service disruptions</strong> in communication, navigation, weather forecasting, and Earth observation.
               </li>
               <li>
-                <strong className="text-neonCyan">Minimizes downtime</strong> in communication, navigation, weather forecasting, and Earth observation
+                Our system allows targeted, <strong className="text-neonCyan">in-orbit maintenance</strong>, ensuring satellites remain fully operational and minimizing downtime.
               </li>
               <li>
-                Ground operators perform repairs with manual precision, reducing error risk
+                Ground operators can perform repairs with <strong className="text-neonCyan">manual precision</strong>, reducing the risk of errors during maintenance tasks.
               </li>
               <li>
-                Hybrid approach improves efficiency, reliability, and safety
+                The hybrid approach of autonomous detection and manual repair improves efficiency, reliability, and safety in satellite operations.
               </li>
             </ul>
           </div>
@@ -93,16 +93,13 @@ export default function Impact() {
             </div>
             <ul className="space-y-4 text-gray-700 leading-relaxed">
               <li>
-                <strong className="text-thrusterOrange">Reduces space debris</strong> by extending satellite lifespans and performing in-orbit repairs
+                Non-functional satellites contribute to <strong className="text-thrusterOrange">space debris</strong>, increasing collision risks in low Earth orbit (LEO).
               </li>
               <li>
-                Improves safety for other satellites and future missions in LEO
+                By extending satellite lifespans and performing in-orbit repairs, our system <strong className="text-thrusterOrange">reduces the generation of space debris</strong>, improving safety for other satellites and future missions.
               </li>
               <li>
-                Minimizes launch frequency, <strong className="text-thrusterOrange">reducing environmental footprint</strong> from rocket launches
-              </li>
-              <li>
-                Contributes to sustainable space infrastructure
+                Prolonging the usability of satellites <strong className="text-thrusterOrange">minimizes the frequency of launches</strong>, indirectly reducing the environmental footprint associated with rocket launches.
               </li>
             </ul>
           </div>
@@ -117,16 +114,13 @@ export default function Impact() {
             </div>
             <ul className="space-y-4 text-gray-700 leading-relaxed">
               <li>
-                Combines <strong className="text-successGreen">predictive maintenance, YOLO-based CV</strong>, and modular 3D-printed robotic arms
+                Combines <strong className="text-successGreen">predictive maintenance using NASA lithium-ion battery and telemetry datasets</strong>, YOLO-based computer vision, and modular, 3D-printed robotic arms.
               </li>
               <li>
-                Demonstrates feasible, reusable approach for satellite maintenance in orbit
+                Demonstrates a <strong className="text-successGreen">feasible, reusable approach</strong> for satellite maintenance in orbit, paving the way for next-generation servicing robots and sustainable satellite infrastructure.
               </li>
               <li>
-                Paves the way for <strong className="text-successGreen">next-generation servicing robots</strong>
-              </li>
-              <li>
-                Provides proof-of-concept for semi-autonomous repair systems adaptable to other space assets
+                Provides a <strong className="text-successGreen">proof-of-concept for semi-autonomous repair systems</strong> that could be adapted for other space assets in the future.
               </li>
             </ul>
           </div>

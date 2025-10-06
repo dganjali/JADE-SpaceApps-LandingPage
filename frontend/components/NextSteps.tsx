@@ -34,10 +34,9 @@ export default function NextSteps() {
       color: 'text-thrusterOrange',
       borderColor: 'border-thrusterOrange',
       items: [
-        'Robotic arm built and successfully tested',
-        'Spinning screwdriver fully functional',
-        'Develop modular tool system for swapping different tools',
-        'Enable various maintenance tasks: tightening bolts, adjusting panels, replacing components',
+        'Our robotic arm has been built and successfully tested, demonstrating reliable gripping, stabilization, and manipulation capabilities.',
+        'The spinning screwdriver is also fully functional, allowing precise repair operations.',
+        'Next step: develop a modular tool system, enabling the robot to swap different tools for various maintenance tasks, such as tightening bolts, adjusting panels, or replacing components.',
       ],
     },
     {
@@ -46,11 +45,9 @@ export default function NextSteps() {
       color: 'text-neonCyan',
       borderColor: 'border-neonCyan',
       items: [
-        'Design compact, efficient propulsion unit for LEO navigation',
-        'Test low-thrust systems and orbital maneuver algorithms',
-        'Use small-scale experimental platforms',
-        'Optimize for fuel efficiency and long-term operation',
-        'Enable multiple repair missions without full refueling',
+        'Begin designing a compact, efficient propulsion unit capable of navigating between satellites in LEO.',
+        'Test low-thrust systems and orbital maneuver algorithms using small-scale experimental platforms.',
+        'Optimize propulsion for fuel efficiency and long-term operation, ensuring multiple repair missions without requiring full refueling.',
       ],
     },
     {
@@ -59,10 +56,9 @@ export default function NextSteps() {
       color: 'text-successGreen',
       borderColor: 'border-successGreen',
       items: [
-        'Refine predictive maintenance algorithms using NASA datasets',
-        'Enhance YOLO-based satellite detection for cluttered orbital environments',
-        'Integrate hybrid interface for seamless autonomous/manual switching',
-        'Improve accuracy and reliability during repairs',
+        'Refine predictive maintenance algorithms using NASA telemetry and lithium-ion battery datasets.',
+        'Enhance YOLO-based satellite detection for improved accuracy in cluttered orbital environments.',
+        'Integrate a hybrid interface that allows seamless switching between autonomous navigation and manual ground control during repairs.',
       ],
     },
     {
@@ -71,10 +67,8 @@ export default function NextSteps() {
       color: 'text-neonCyan',
       borderColor: 'border-neonCyan',
       items: [
-        'Develop docking and recharge protocol for repeated use',
-        'Ensure reliable return to host or nearby satellites',
-        'Create mission scheduling software to optimize repair sequences',
-        'Minimize fuel use and extend operational lifespan',
+        'Develop a docking and recharge protocol for repeated use, ensuring the robot can reliably return to the host or nearby satellites.',
+        'Create mission scheduling software to optimize repair sequences, minimize fuel use, and extend operational lifespan.',
       ],
     },
   ]
