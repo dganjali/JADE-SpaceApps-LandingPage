@@ -324,24 +324,22 @@ export default function PredictiveMaintenance() {
           {/* Chart Placeholders for Generalized RUL */}
           <div className="grid md:grid-cols-2 gap-6">
             <div className="bg-white/10 rounded-xl p-6 border border-thrusterOrange/30">
-              <h5 className="text-thrusterOrange font-bold mb-3 font-orbitron">Multi-Component RUL Comparison</h5>
-              <div className="aspect-video bg-deepSpace/50 rounded-lg flex items-center justify-center border border-thrusterOrange/20">
-                <div className="text-center">
-                  <Activity className="w-12 h-12 text-thrusterOrange/40 mx-auto mb-2" />
-                  <p className="text-white/50 font-mono text-xs">COMPONENT_RUL_TIMELINE</p>
-                  <p className="text-white/30 text-xs mt-1">Battery, solar, sensors, reaction wheels</p>
-                </div>
+              <div className="rounded-lg overflow-hidden border border-thrusterOrange/20">
+                <img 
+                  src="/images/rul-graph1.png" 
+                  alt="Multi-component RUL comparison timeline" 
+                  className="w-full h-auto object-contain"
+                />
               </div>
             </div>
             
             <div className="bg-white/10 rounded-xl p-6 border border-neonCyan/30">
-              <h5 className="text-neonCyan font-bold mb-3 font-orbitron">Prediction Confidence Intervals</h5>
-              <div className="aspect-video bg-deepSpace/50 rounded-lg flex items-center justify-center border border-neonCyan/20">
-                <div className="text-center">
-                  <TrendingUp className="w-12 h-12 text-neonCyan/40 mx-auto mb-2" />
-                  <p className="text-white/50 font-mono text-xs">UNCERTAINTY_BOUNDS</p>
-                  <p className="text-white/30 text-xs mt-1">95% confidence intervals for RUL estimates</p>
-                </div>
+              <div className="rounded-lg overflow-hidden border border-neonCyan/20">
+                <img 
+                  src="/images/rul-graph2.png" 
+                  alt="RUL prediction confidence intervals" 
+                  className="w-full h-auto object-contain"
+                />
               </div>
             </div>
           </div>

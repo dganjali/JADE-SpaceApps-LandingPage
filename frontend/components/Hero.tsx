@@ -330,10 +330,10 @@ export default function Hero(): JSX.Element {
         }}
       >
         <div className="text-center px-6 max-w-5xl">
-          {/* Main Title - Inter SemiBold 72px */}
+          {/* Main Title - JADEarm */}
           <div ref={titleRef} className="mb-6">
-            <h1 className="text-4xl md:text-6xl font-inter font-semibold leading-tight text-white">
-              {Array.from('Autonomous Satellite Servicing System').map((c, i) => (
+            <h1 className="text-8xl md:text-9xl font-orbitron font-black leading-tight text-white tracking-wider">
+              {Array.from('JADEarm').map((c, i) => (
                 <span key={i} className="char inline-block">
                   {c === ' ' ? '\u00A0' : c}
                 </span>
@@ -341,14 +341,7 @@ export default function Hero(): JSX.Element {
             </h1>
           </div>
 
-          {/* Subtitle - Inter Medium 28px with typing effect */}
-          <p
-            ref={subtitleRef}
-            className="text-2xl font-inter font-medium text-white/90 mb-8 min-h-[2rem]"
-          >
-            {subtitleText}
-            <span className="inline-block w-0.5 h-6 bg-neonCyan ml-1 animate-pulse" />
-          </p>
+
 
           {/* Keywords - Orbitron Bold 24px with pulse */}
           <div ref={keywordsRef} className="flex flex-wrap gap-4 justify-center text-xl font-orbitron font-bold uppercase mb-8">
