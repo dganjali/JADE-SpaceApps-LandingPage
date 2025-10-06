@@ -29,45 +29,58 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* Center: Links */}
+          {/* Center: GitHub */}
           <div className="flex flex-col items-center gap-4">
-            <a
-              href="https://github.com/dganjali/JADE-SpaceApps-LandingPage"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-softWhite hover:text-neonCyan transition-all duration-300 hover:translate-x-1 font-medium"
-            >
-              GitHub
-            </a>
-            <a
-              href="#"
-              className="text-softWhite hover:text-neonCyan transition-all duration-300 hover:translate-x-1 font-medium"
-            >
-              Devpost
-            </a>
-            <a
-              href="#"
-              className="text-softWhite hover:text-neonCyan transition-all duration-300 hover:translate-x-1 font-medium"
-            >
-              Demo
-            </a>
-            <a
-              href="#"
-              className="text-softWhite hover:text-neonCyan transition-all duration-300 hover:translate-x-1 font-medium"
-            >
-              Research Paper
-            </a>
+            <div className="text-center">
+              <p className="text-mutedGray text-sm mb-2">GitHub</p>
+              <a
+                href="https://github.com/dganjali/JADE-SpaceApps"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-softWhite hover:text-neonCyan transition-colors text-sm"
+              >
+                github.com/dganjali/JADE-SpaceApps
+              </a>
+            </div>
           </div>
 
-          {/* Right: Contact */}
+          {/* Right: Team LinkedIn */}
           <div className="text-center md:text-right">
-            <p className="text-mutedGray text-sm mb-2">Contact</p>
-            <a
-              href="mailto:contact@jade-sat.space"
-              className="text-softWhite hover:text-neonCyan transition-colors text-sm"
-            >
-              contact@jade-sat.space
-            </a>
+            <p className="text-mutedGray text-sm mb-3">Team LinkedIn</p>
+            <div className="space-y-2">
+              <a
+                href="https://www.linkedin.com/in/daniel-ganjali-792bab30a/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block text-softWhite hover:text-neonCyan transition-colors text-sm"
+              >
+                Daniel Ganjali
+              </a>
+              <a
+                href="https://www.linkedin.com/in/emerson-ni/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block text-softWhite hover:text-neonCyan transition-colors text-sm"
+              >
+                Emerson Ni
+              </a>
+              <a
+                href="https://www.linkedin.com/in/arjwaraich/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block text-softWhite hover:text-neonCyan transition-colors text-sm"
+              >
+                Arjan Waraich
+              </a>
+              <a
+                href="https://www.linkedin.com/in/justin-rui-801375355/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block text-softWhite hover:text-neonCyan transition-colors text-sm"
+              >
+                Justin Rui
+              </a>
+            </div>
           </div>
         </div>
 

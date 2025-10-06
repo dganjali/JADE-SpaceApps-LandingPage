@@ -10,22 +10,23 @@ gsap.registerPlugin(ScrollTrigger)
 export default function NavigationDocking() {
   const sectionRef = useRef<HTMLElement>(null)
 
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      gsap.from('.nav-card', {
-        scrollTrigger: {
-          trigger: '.nav-card',
-          start: 'top 85%',
-        },
-        y: 40,
-        opacity: 0,
-        duration: 0.7,
-        stagger: 0.15,
-      })
-    }, sectionRef)
-
-    return () => ctx.revert()
-  }, [])
+  // Animation removed for better visibility
+  // useEffect(() => {
+  //   const ctx = gsap.context(() => {
+  //     gsap.from('.nav-card', {
+  //       scrollTrigger: {
+  //         trigger: '.nav-card',
+  //         start: 'top 85%',
+  //       },
+  //       y: 40,
+  //       opacity: 0,
+  //       duration: 0.7,
+  //       stagger: 0.15,
+  //     })
+  //   }, sectionRef)
+  //
+  //   return () => ctx.revert()
+  // }, [])
 
   return (
     <section ref={sectionRef} className="min-h-screen py-20 px-6 bg-gradient-to-b from-[#0A0E16] to-[#182743] relative overflow-hidden">
@@ -62,21 +63,16 @@ export default function NavigationDocking() {
             </div>
 
             {/* Gazebo Simulation Video */}
-            <div className="relative aspect-video bg-black rounded-xl overflow-hidden mb-6 border-2 border-thrusterOrange/50">
+            <div className="relative aspect-video bg-gradient-to-br from-thrusterOrange/20 to-black rounded-xl overflow-hidden mb-6 border-2 border-thrusterOrange/50">
               <video 
                 className="w-full h-full object-contain"
                 controls
-                preload="metadata"
-                playsInline
-                style={{ backgroundColor: '#000' }}
+                preload="auto"
               >
                 <source src="/videos/gazebo.mp4" type="video/mp4" />
-                <div className="flex flex-col items-center justify-center h-full text-white">
-                  <p>Your browser does not support the video tag.</p>
-                  <a href="/videos/gazebo.mp4" className="text-thrusterOrange underline mt-2" download>
-                    Download video instead
-                  </a>
-                </div>
+                <p className="text-white p-8 text-center">
+                  Your browser does not support the video tag.
+                </p>
               </video>
             </div>
 
@@ -109,20 +105,36 @@ export default function NavigationDocking() {
               <h3 className="text-3xl font-orbitron font-bold text-white">Computer Vision</h3>
             </div>
 
-            {/* CV Detection Video Placeholder */}
-            <div className="relative aspect-video bg-gradient-to-br from-deepSpace to-orbitBlue rounded-xl overflow-hidden mb-6 border border-neonCyan/30 group cursor-pointer">
-              <div className="absolute inset-0 flex flex-col items-center justify-center">
-                <Eye className="w-20 h-20 text-neonCyan/40 mb-4" />
-                <span className="text-sm text-white/60 font-mono">YOLO_CV_DETECTION</span>
-                <span className="text-xs text-white/40 mt-2">Real-time Satellite Tracking</span>
+            {/* Two Portrait CV Detection Videos */}
+            <div className="grid grid-cols-2 gap-4 mb-6">
+              {/* Video 1: Satellite Detection */}
+              <div className="relative bg-gradient-to-br from-gray-900 to-gray-800 rounded-xl overflow-hidden border border-neonCyan/30 shadow-lg" style={{ aspectRatio: '9/16' }}>
+                <div className="absolute inset-0 bg-gradient-to-br from-neonCyan/10 via-transparent to-successGreen/10 opacity-50 z-0" />
+                <video 
+                  className="w-full h-full object-contain relative z-10"
+                  controls
+                  preload="metadata"
+                  playsInline
+                  muted
+                >
+                  <source src="/videos/yolo-detection.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
               </div>
-              {/* Play Overlay */}
-              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all flex items-center justify-center">
-                <div className="opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:scale-110">
-                  <div className="w-16 h-16 rounded-full bg-neonCyan/90 flex items-center justify-center animate-pulse">
-                    <Play className="w-8 h-8 text-white ml-1" fill="white" />
-                  </div>
-                </div>
+
+              {/* Video 2: Tracking & Approach */}
+              <div className="relative bg-gradient-to-br from-gray-900 to-gray-800 rounded-xl overflow-hidden border border-neonCyan/30 shadow-lg" style={{ aspectRatio: '9/16' }}>
+                <div className="absolute inset-0 bg-gradient-to-br from-neonCyan/10 via-transparent to-successGreen/10 opacity-50 z-0" />
+                <video 
+                  className="w-full h-full object-contain relative z-10"
+                  controls
+                  preload="metadata"
+                  playsInline
+                  muted
+                >
+                  <source src="/videos/tracking-approach.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
               </div>
             </div>
 

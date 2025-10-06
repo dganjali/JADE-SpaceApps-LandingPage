@@ -1,32 +1,8 @@
 'use client'
 
-import { useEffect, useRef } from 'react'
-import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { Cpu, Rocket, Brain, ClipboardList } from 'lucide-react'
 
-gsap.registerPlugin(ScrollTrigger)
-
 export default function NextSteps() {
-  const sectionRef = useRef<HTMLElement>(null)
-
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      gsap.from('.step-card', {
-        scrollTrigger: {
-          trigger: '.step-card',
-          start: 'top 85%',
-        },
-        x: -40,
-        opacity: 0,
-        duration: 0.6,
-        stagger: 0.15,
-      })
-    }, sectionRef)
-
-    return () => ctx.revert()
-  }, [])
-
   const steps = [
     {
       Icon: Cpu,
@@ -74,7 +50,7 @@ export default function NextSteps() {
   ]
 
   return (
-    <section ref={sectionRef} className="min-h-screen py-20 px-6 bg-gradient-to-b from-[#182743] to-[#0A0E16] grid-pattern relative">
+    <section className="min-h-screen py-20 px-6 bg-gradient-to-b from-[#182743] to-[#0A0E16] grid-pattern relative">
       <div className="max-w-6xl mx-auto relative z-10">
         <h2 className="text-5xl md:text-6xl font-inter font-bold text-center text-white mb-16">
           Next Steps

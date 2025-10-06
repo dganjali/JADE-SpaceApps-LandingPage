@@ -5,8 +5,12 @@ import { Inter } from 'next/font/google'
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 
 export const metadata = {
-  title: 'Autonomous Satellite Servicing System',
-  description: 'Predict • Navigate • Repair • Reuse'
+  title: 'JADE | Autonomous Satellite Servicing',
+  description: 'Predict • Navigate • Repair • Reuse',
+  icons: {
+    icon: '/favicon.ico',
+    apple: '/apple-touch-icon.png',
+  },
 }
 
 export default function RootLayout({ children }: { children: ReactNode }) {

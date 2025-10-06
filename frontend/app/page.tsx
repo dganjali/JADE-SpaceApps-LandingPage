@@ -3,8 +3,8 @@ import ProblemSolution from '../components/ProblemSolution'
 import PredictiveMaintenance from '../components/PredictiveMaintenance'
 import NavigationDocking from '../components/NavigationDocking'
 import RoboticArms from '../components/RoboticArms'
+import TechnicalFormulas from '../components/TechnicalFormulas'
 import Impact from '../components/Impact'
-import PartsSpec from '../components/PartsSpec'
 import MarketBusiness from '../components/MarketBusiness'
 import NextSteps from '../components/NextSteps'
 import Footer from '../components/Footer'
@@ -22,9 +22,10 @@ export default function Page() {
         <PredictiveMaintenance />
         <NavigationDocking />
         <RoboticArms />
+        {/* MATHEMATICAL FOUNDATION */}
+        <TechnicalFormulas />
         {/* SUPPORTING SECTIONS */}
         <Impact />
-        <PartsSpec />
         <MarketBusiness />
         <NextSteps />
         <Footer />

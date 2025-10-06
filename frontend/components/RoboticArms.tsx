@@ -1,34 +1,10 @@
 'use client'
 
-import { useEffect, useRef } from 'react'
-import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { Cpu, Settings, Wrench, Battery, Play } from 'lucide-react'
 
-gsap.registerPlugin(ScrollTrigger)
-
 export default function RoboticArms() {
-  const sectionRef = useRef<HTMLElement>(null)
-
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      gsap.from('.arm-card', {
-        scrollTrigger: {
-          trigger: '.arm-card',
-          start: 'top 85%',
-        },
-        y: 40,
-        opacity: 0,
-        duration: 0.7,
-        stagger: 0.15,
-      })
-    }, sectionRef)
-
-    return () => ctx.revert()
-  }, [])
-
   return (
-    <section ref={sectionRef} className="min-h-screen py-20 px-6 bg-white relative">
+    <section className="min-h-screen py-20 px-6 bg-white relative">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -47,23 +23,24 @@ export default function RoboticArms() {
         {/* Main Demo Videos */}
         <div className="grid lg:grid-cols-2 gap-8 mb-16">
           {/* Demo 1: Arm Gripping & Manipulation */}
-          <div className="arm-card bg-white rounded-2xl overflow-hidden border-2 border-gray-200 hover:border-thrusterOrange hover:shadow-2xl transition-all group">
-            <div className="relative aspect-video bg-gradient-to-br from-slate-50 to-slate-100 cursor-pointer overflow-hidden">
-              <div className="absolute inset-0 flex flex-col items-center justify-center">
-                <Cpu className="w-24 h-24 text-thrusterOrange/30 mb-4" />
-                <span className="text-lg text-gray-500 font-mono">ARM_GRIPPING_DEMO</span>
-                <span className="text-sm text-gray-400 mt-2">3-DOF Manipulation & Gripping</span>
-              </div>
-              {/* Play Overlay */}
-              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all flex items-center justify-center">
-                <div className="opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:scale-110">
-                  <div className="w-20 h-20 rounded-full bg-thrusterOrange/90 flex items-center justify-center animate-pulse">
-                    <Play className="w-10 h-10 text-white ml-1" fill="white" />
+          <div className="arm-card bg-white rounded-2xl overflow-hidden shadow-xl border-2 border-gray-200 hover:border-thrusterOrange hover:shadow-2xl transition-all group">
+            <div className="relative aspect-video bg-gradient-to-br from-gray-900 to-gray-800 overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-thrusterOrange/10 via-transparent to-neonCyan/10 opacity-50" />
+              <video 
+                className="w-full h-full object-contain relative z-10"
+                controls
+                preload="metadata"
+              >
+                <source src="/videos/arm-gripping.mp4" type="video/mp4" />
+                <div className="absolute inset-0 flex items-center justify-center text-white p-8 text-center">
+                  <div>
+                    <Play className="w-16 h-16 mx-auto mb-4 opacity-50" />
+                    <p>Video: Precision Gripping Demo</p>
                   </div>
                 </div>
-              </div>
+              </video>
             </div>
-            <div className="p-8">
+            <div className="p-8 bg-gradient-to-br from-white to-gray-50">
               <h3 className="text-2xl font-inter font-bold text-deepSpace mb-4">Precision Gripping</h3>
               <p className="text-gray-700 mb-4">
                 Demonstration of the robotic arm's ability to grasp, hold, and manipulate satellite components with precision control.
@@ -86,23 +63,24 @@ export default function RoboticArms() {
           </div>
 
           {/* Demo 2: Tool Operation */}
-          <div className="arm-card bg-white rounded-2xl overflow-hidden border-2 border-gray-200 hover:border-neonCyan hover:shadow-2xl transition-all group">
-            <div className="relative aspect-video bg-gradient-to-br from-slate-50 to-slate-100 cursor-pointer overflow-hidden">
-              <div className="absolute inset-0 flex flex-col items-center justify-center">
-                <Settings className="w-24 h-24 text-neonCyan/30 mb-4" />
-                <span className="text-lg text-gray-500 font-mono">TOOL_OPERATION_DEMO</span>
-                <span className="text-sm text-gray-400 mt-2">Modular Screwdriver System</span>
-              </div>
-              {/* Play Overlay */}
-              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all flex items-center justify-center">
-                <div className="opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:scale-110">
-                  <div className="w-20 h-20 rounded-full bg-neonCyan/90 flex items-center justify-center animate-pulse">
-                    <Play className="w-10 h-10 text-white ml-1" fill="white" />
+          <div className="arm-card bg-white rounded-2xl overflow-hidden shadow-xl border-2 border-gray-200 hover:border-neonCyan hover:shadow-2xl transition-all group">
+            <div className="relative aspect-video bg-gradient-to-br from-gray-900 to-gray-800 overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-neonCyan/10 via-transparent to-successGreen/10 opacity-50" />
+              <video 
+                className="w-full h-full object-contain relative z-10"
+                controls
+                preload="metadata"
+              >
+                <source src="/videos/tool-operation.mp4" type="video/mp4" />
+                <div className="absolute inset-0 flex items-center justify-center text-white p-8 text-center">
+                  <div>
+                    <Play className="w-16 h-16 mx-auto mb-4 opacity-50" />
+                    <p>Video: Spinning Screwdriver Demo</p>
                   </div>
                 </div>
-              </div>
+              </video>
             </div>
-            <div className="p-8">
+            <div className="p-8 bg-gradient-to-br from-white to-gray-50">
               <h3 className="text-2xl font-inter font-bold text-deepSpace mb-4">Modular Tool System</h3>
               <p className="text-gray-700 mb-4">
                 Watch the spinning screwdriver in action. Interchangeable tool heads enable various repair tasks from tightening bolts to adjusting panels.

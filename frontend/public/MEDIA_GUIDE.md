@@ -20,6 +20,17 @@ Place your media files in the appropriate folders below. The website will automa
 
 ---
 
+## 📊 **Predictive Maintenance Section**
+**Location:** `/public/videos/`
+
+### Files needed:
+1. **`model-demo.mp4`** (PORTRAIT/VERTICAL - 9:16 aspect ratio)
+   - ML model demonstration video
+   - Should show the predictive maintenance model analyzing data
+   - **Note:** This should be a vertical/portrait video!
+
+---
+
 ## 🎥 **Navigation & Docking Section**
 **Location:** `/public/videos/`
 
@@ -28,7 +39,7 @@ Place your media files in the appropriate folders below. The website will automa
    - Gazebo simulation video showing autonomous navigation
    - Should demonstrate GPS/IMU navigation
 
-2. **`yolo-detection.mp4`** or **`yolo-detection.webm`**
+2. **`yolo-detection.mp4`** (OPTIONAL)
    - YOLO computer vision detection video
    - Should show satellite detection and tracking
 
@@ -38,11 +49,11 @@ Place your media files in the appropriate folders below. The website will automa
 **Location:** `/public/videos/`
 
 ### Files needed:
-1. **`arm-gripping.mp4`** or **`arm-gripping.webm`**
+1. **`arm-gripping.mp4`**
    - Robotic arm gripping demonstration
    - Shows the arm grabbing and holding objects
 
-2. **`tool-operation.mp4`** or **`tool-operation.webm`**
+2. **`tool-operation.mp4`**
    - Tool operation demo (spinning screwdriver, etc.)
    - Shows the arm using tools for repairs
 
@@ -95,10 +106,11 @@ Example:
 
 ## ✅ Quick Checklist
 
-- [ ] `rul-timeline.png` → `/public/images/`
-- [ ] `health-status.png` → `/public/images/`
-- [ ] `gazebo-simulation.mp4` → `/public/videos/`
-- [ ] `yolo-detection.mp4` → `/public/videos/`
+- [ ] `model-demo.mp4` (PORTRAIT) → `/public/videos/`
+- [ ] `rul-timeline.png` → `/public/images/` (OPTIONAL - placeholder exists)
+- [ ] `health-status.png` → `/public/images/` (OPTIONAL - placeholder exists)
+- [x] `gazebo.mp4` → `/public/videos/` ✅
+- [ ] `yolo-detection.mp4` → `/public/videos/` (OPTIONAL)
 - [ ] `arm-gripping.mp4` → `/public/videos/`
 - [ ] `tool-operation.mp4` → `/public/videos/`
 

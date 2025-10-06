@@ -36,7 +36,7 @@ export default function ProblemSolution() {
   }, [])
 
   return (
-    <section ref={sectionRef} className="min-h-screen py-20 px-6 bg-gradient-to-b from-[#111A27] to-[#182743] flex items-center relative overflow-hidden">
+    <section ref={sectionRef} className="py-20 px-6 bg-gradient-to-b from-[#111A27] to-[#182743] relative overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-20 left-10 w-64 h-64 bg-neonCyan rounded-full blur-3xl animate-pulse" />
@@ -80,6 +80,15 @@ export default function ProblemSolution() {
               <p className="text-mutedGray italic">
                 Currently, there is no cost-effective way to repair or maintain satellites in orbit, so when a satellite fails, operators have to build a new satellite to replace it.
               </p>
+
+              {/* Satellite Image */}
+              <div className="mt-8 rounded-xl overflow-hidden border-2 border-warningRed/30 shadow-lg">
+                <img 
+                  src="/images/satellite.png" 
+                  alt="Satellite in orbit" 
+                  className="w-full h-auto object-cover"
+                />
+              </div>
             </div>
           </div>
 
