@@ -62,14 +62,21 @@ export default function NavigationDocking() {
             </div>
 
             {/* Gazebo Simulation Video */}
-            <div className="relative aspect-video bg-gradient-to-br from-deepSpace to-orbitBlue rounded-xl overflow-hidden mb-6 border border-thrusterOrange/30">
+            <div className="relative aspect-video bg-black rounded-xl overflow-hidden mb-6 border-2 border-thrusterOrange/50">
               <video 
-                className="w-full h-full object-cover"
+                className="w-full h-full object-contain"
                 controls
                 preload="metadata"
+                playsInline
+                style={{ backgroundColor: '#000' }}
               >
                 <source src="/videos/gazebo.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
+                <div className="flex flex-col items-center justify-center h-full text-white">
+                  <p>Your browser does not support the video tag.</p>
+                  <a href="/videos/gazebo.mp4" className="text-thrusterOrange underline mt-2" download>
+                    Download video instead
+                  </a>
+                </div>
               </video>
             </div>
 
