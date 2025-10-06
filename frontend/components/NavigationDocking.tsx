@@ -147,33 +147,38 @@ export default function NavigationDocking() {
 
         {/* Navigation Process Steps */}
         <div className="grid md:grid-cols-4 gap-4 mb-16">
-          <div className="nav-card bg-orbitBlue/30 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-successGreen/50 transition-all text-center group">
-            <div className="w-12 h-12 rounded-full bg-successGreen/20 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
-              <Radio className="w-6 h-6 text-successGreen" />
+          <div className="nav-card bg-orbitBlue/30 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-successGreen hover:shadow-[0_0_30px_rgba(57,255,20,0.3)] transition-all text-center group cursor-pointer relative overflow-hidden">
+            <div className="absolute top-0 left-0 h-1 bg-successGreen w-0 group-hover:w-full transition-all duration-1000" />
+            <div className="w-12 h-12 rounded-full bg-successGreen/20 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 group-hover:bg-successGreen/40 transition-all relative">
+              <Radio className="w-6 h-6 text-successGreen group-hover:animate-pulse" />
+              <div className="absolute inset-0 rounded-full border-2 border-successGreen/50 animate-ping" />
             </div>
             <h4 className="font-orbitron font-bold text-white mb-2">1. GPS Lock</h4>
             <p className="text-xs text-white/70">Local positioning and alignment</p>
           </div>
 
-          <div className="nav-card bg-orbitBlue/30 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-neonCyan/50 transition-all text-center group">
-            <div className="w-12 h-12 rounded-full bg-neonCyan/20 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
-              <Eye className="w-6 h-6 text-neonCyan" />
+          <div className="nav-card bg-orbitBlue/30 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-neonCyan hover:shadow-[0_0_30px_rgba(0,255,255,0.3)] transition-all text-center group cursor-pointer relative overflow-hidden">
+            <div className="absolute top-0 left-0 h-1 bg-neonCyan w-0 group-hover:w-full transition-all duration-1000" />
+            <div className="w-12 h-12 rounded-full bg-neonCyan/20 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 group-hover:bg-neonCyan/40 transition-all">
+              <Eye className="w-6 h-6 text-neonCyan group-hover:scale-125 transition-transform" />
             </div>
-            <h4 className="font-orbitron font-bold text-white mb-2">2. Visual Detect</h4>
+            <h4 className="font-orbitron font-bold text-white mb-2 glitch">2. Visual Detect</h4>
             <p className="text-xs text-white/70">YOLO identifies target satellite</p>
           </div>
 
-          <div className="nav-card bg-orbitBlue/30 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-thrusterOrange/50 transition-all text-center group">
-            <div className="w-12 h-12 rounded-full bg-thrusterOrange/20 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
-              <Rocket className="w-6 h-6 text-thrusterOrange" />
+          <div className="nav-card bg-orbitBlue/30 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-thrusterOrange hover:shadow-[0_0_30px_rgba(255,126,46,0.3)] transition-all text-center group cursor-pointer relative overflow-hidden">
+            <div className="absolute top-0 left-0 h-1 bg-thrusterOrange w-0 group-hover:w-full transition-all duration-1000" />
+            <div className="w-12 h-12 rounded-full bg-thrusterOrange/20 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 group-hover:bg-thrusterOrange/40 transition-all">
+              <Rocket className="w-6 h-6 text-thrusterOrange group-hover:-translate-y-2 transition-transform" />
             </div>
             <h4 className="font-orbitron font-bold text-white mb-2">3. Approach</h4>
             <p className="text-xs text-white/70">Controlled thruster maneuvers</p>
           </div>
 
-          <div className="nav-card bg-orbitBlue/30 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-successGreen/50 transition-all text-center group">
-            <div className="w-12 h-12 rounded-full bg-successGreen/20 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
-              <Target className="w-6 h-6 text-successGreen" />
+          <div className="nav-card bg-orbitBlue/30 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-successGreen hover:shadow-[0_0_30px_rgba(57,255,20,0.3)] transition-all text-center group cursor-pointer relative overflow-hidden">
+            <div className="absolute top-0 left-0 h-1 bg-successGreen w-0 group-hover:w-full transition-all duration-1000" />
+            <div className="w-12 h-12 rounded-full bg-successGreen/20 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 group-hover:bg-successGreen/40 transition-all">
+              <Target className="w-6 h-6 text-successGreen group-hover:rotate-90 transition-transform duration-500" />
             </div>
             <h4 className="font-orbitron font-bold text-white mb-2">4. Dock</h4>
             <p className="text-xs text-white/70">Soft capture and stabilization</p>

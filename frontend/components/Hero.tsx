@@ -5,6 +5,7 @@ import React, { Suspense, useRef, useEffect, useState } from 'react'
 import * as THREE from 'three'
 import gsap from 'gsap'
 import FloatingBadge from './FloatingBadge'
+import StatusBadge from './StatusBadge'
 
 // Earth component with rotation and orbit lines
 function Earth() {
@@ -318,7 +319,7 @@ export default function Hero(): JSX.Element {
           </p>
 
           {/* Keywords - Orbitron Bold 24px with pulse */}
-          <div ref={keywordsRef} className="flex flex-wrap gap-4 justify-center text-xl font-orbitron font-bold uppercase">
+          <div ref={keywordsRef} className="flex flex-wrap gap-4 justify-center text-xl font-orbitron font-bold uppercase mb-8">
             <span className="keyword px-6 py-3 border-2 border-neonCyan text-neonCyan rounded-xl neon backdrop-blur-sm bg-neonCyan/5 hover:bg-neonCyan hover:text-deepSpace hover:scale-110 hover:shadow-[0_0_30px_rgba(0,255,255,0.6)] transition-all cursor-pointer">
               PREDICT
             </span>
@@ -331,6 +332,13 @@ export default function Hero(): JSX.Element {
             <span className="keyword px-6 py-3 border-2 border-neonCyan text-neonCyan rounded-xl neon backdrop-blur-sm bg-neonCyan/5 hover:bg-neonCyan hover:text-deepSpace hover:scale-110 hover:shadow-[0_0_30px_rgba(0,255,255,0.6)] transition-all cursor-pointer">
               REUSE
             </span>
+          </div>
+
+          {/* Live Status Indicators */}
+          <div className="flex flex-wrap gap-4 justify-center">
+            <StatusBadge status="active" text="SYSTEM ONLINE" />
+            <StatusBadge status="success" text="ALL CHECKS PASSED" />
+            <StatusBadge status="warning" text="DEMO MODE" />
           </div>
         </div>
       </div>

@@ -100,13 +100,29 @@ export default function PartsSpec() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {partsCategories.map((category, idx) => (
-            <div key={idx} className="parts-card bg-orbitBlue/40 backdrop-blur-sm rounded-xl p-6 border border-neonCyan/20 hover:border-neonCyan/40 transition-all shadow-lg hover:shadow-xl">
-              <h3 className={`text-xl font-orbitron font-bold ${category.color} mb-4 uppercase`}>
+            <div 
+              key={idx} 
+              className="parts-card group bg-orbitBlue/40 backdrop-blur-sm rounded-xl p-6 border border-neonCyan/20 hover:border-neonCyan/60 transition-all shadow-lg hover:shadow-2xl hover:-translate-y-2 relative overflow-hidden"
+            >
+              {/* Shimmer overlay on hover */}
+              <div className="absolute inset-0 shimmer opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
+              
+              {/* Corner accent */}
+              <div className={`absolute top-0 right-0 w-16 h-16 ${category.color.replace('text-', 'bg-')}/10 rounded-bl-full transition-all group-hover:w-20 group-hover:h-20`} />
+              
+              <h3 className={`text-xl font-orbitron font-bold ${category.color} mb-4 uppercase relative z-10 flex items-center gap-2`}>
+                <span className={`w-2 h-2 rounded-full ${category.color.replace('text-', 'bg-')} animate-pulse`} />
                 {category.title}
               </h3>
-              <ul className="space-y-2 text-sm text-softWhite">
+              <ul className="space-y-2 text-sm text-softWhite relative z-10">
                 {category.items.map((item, i) => (
-                  <li key={i} className="leading-relaxed">• {item}</li>
+                  <li 
+                    key={i} 
+                    className="leading-relaxed hover:text-white hover:translate-x-1 transition-all cursor-default flex items-start gap-2"
+                  >
+                    <span className={`${category.color} mt-1`}>▸</span>
+                    <span>{item}</span>
+                  </li>
                 ))}
               </ul>
             </div>

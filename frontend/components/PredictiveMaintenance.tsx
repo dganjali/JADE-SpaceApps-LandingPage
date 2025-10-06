@@ -47,28 +47,36 @@ export default function PredictiveMaintenance() {
 
         {/* Key Features */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-          <div className="pm-card bg-gradient-to-br from-successGreen/10 to-neonCyan/10 rounded-xl p-6 border border-successGreen/30 hover:border-successGreen hover:shadow-xl transition-all group">
-            <TrendingUp className="w-10 h-10 text-successGreen mb-4 group-hover:scale-110 transition-transform" />
-            <h3 className="text-lg font-bold text-deepSpace mb-2">RUL Prediction</h3>
-            <p className="text-sm text-gray-700">Estimates Remaining Useful Life of satellite components</p>
+          <div className="pm-card bg-gradient-to-br from-successGreen/10 to-neonCyan/10 rounded-xl p-6 border border-successGreen/30 hover:border-successGreen hover:shadow-xl hover:-translate-y-2 transition-all group cursor-pointer relative overflow-hidden">
+            <div className="absolute inset-0 scan-line opacity-0 group-hover:opacity-100" />
+            <TrendingUp className="w-10 h-10 text-successGreen mb-4 group-hover:scale-110 group-hover:rotate-12 transition-all relative z-10" />
+            <h3 className="text-lg font-bold text-deepSpace mb-2 relative z-10">RUL Prediction</h3>
+            <p className="text-sm text-gray-700 relative z-10">Estimates Remaining Useful Life of satellite components</p>
+            <div className="absolute top-2 right-2 w-2 h-2 rounded-full bg-successGreen animate-pulse" />
           </div>
 
-          <div className="pm-card bg-gradient-to-br from-successGreen/10 to-neonCyan/10 rounded-xl p-6 border border-successGreen/30 hover:border-successGreen hover:shadow-xl transition-all group">
-            <Activity className="w-10 h-10 text-successGreen mb-4 group-hover:scale-110 transition-transform" />
-            <h3 className="text-lg font-bold text-deepSpace mb-2">Real-Time Monitoring</h3>
-            <p className="text-sm text-gray-700">Continuous analysis of temperature, voltage, and current</p>
+          <div className="pm-card bg-gradient-to-br from-successGreen/10 to-neonCyan/10 rounded-xl p-6 border border-successGreen/30 hover:border-successGreen hover:shadow-xl hover:-translate-y-2 transition-all group cursor-pointer relative overflow-hidden">
+            <div className="absolute inset-0 scan-line opacity-0 group-hover:opacity-100" />
+            <Activity className="w-10 h-10 text-successGreen mb-4 group-hover:scale-110 animate-pulse transition-all relative z-10" />
+            <h3 className="text-lg font-bold text-deepSpace mb-2 relative z-10">Real-Time Monitoring</h3>
+            <p className="text-sm text-gray-700 relative z-10">Continuous analysis of temperature, voltage, and current</p>
+            <div className="absolute top-2 right-2 w-2 h-2 rounded-full bg-neonCyan animate-pulse" />
           </div>
 
-          <div className="pm-card bg-gradient-to-br from-successGreen/10 to-neonCyan/10 rounded-xl p-6 border border-successGreen/30 hover:border-successGreen hover:shadow-xl transition-all group">
-            <AlertTriangle className="w-10 h-10 text-successGreen mb-4 group-hover:scale-110 transition-transform" />
-            <h3 className="text-lg font-bold text-deepSpace mb-2">Early Warning</h3>
-            <p className="text-sm text-gray-700">Identifies potential failures weeks in advance</p>
+          <div className="pm-card bg-gradient-to-br from-successGreen/10 to-neonCyan/10 rounded-xl p-6 border border-successGreen/30 hover:border-successGreen hover:shadow-xl hover:-translate-y-2 transition-all group cursor-pointer relative overflow-hidden">
+            <div className="absolute inset-0 scan-line opacity-0 group-hover:opacity-100" />
+            <AlertTriangle className="w-10 h-10 text-successGreen mb-4 group-hover:scale-110 group-hover:animate-bounce transition-transform relative z-10" />
+            <h3 className="text-lg font-bold text-deepSpace mb-2 relative z-10">Early Warning</h3>
+            <p className="text-sm text-gray-700 relative z-10">Identifies potential failures weeks in advance</p>
+            <div className="absolute top-2 right-2 w-2 h-2 rounded-full bg-warningRed animate-pulse" />
           </div>
 
-          <div className="pm-card bg-gradient-to-br from-successGreen/10 to-neonCyan/10 rounded-xl p-6 border border-successGreen/30 hover:border-successGreen hover:shadow-xl transition-all group">
-            <Brain className="w-10 h-10 text-successGreen mb-4 group-hover:scale-110 transition-transform" />
-            <h3 className="text-lg font-bold text-deepSpace mb-2">NASA Dataset</h3>
-            <p className="text-sm text-gray-700">Trained on real satellite telemetry and battery data</p>
+          <div className="pm-card bg-gradient-to-br from-successGreen/10 to-neonCyan/10 rounded-xl p-6 border border-successGreen/30 hover:border-successGreen hover:shadow-xl hover:-translate-y-2 transition-all group cursor-pointer relative overflow-hidden">
+            <div className="absolute inset-0 scan-line opacity-0 group-hover:opacity-100" />
+            <Brain className="w-10 h-10 text-successGreen mb-4 group-hover:scale-110 group-hover:rotate-6 transition-all relative z-10" />
+            <h3 className="text-lg font-bold text-deepSpace mb-2 relative z-10">NASA Dataset</h3>
+            <p className="text-sm text-gray-700 relative z-10">Trained on real satellite telemetry and battery data</p>
+            <div className="absolute top-2 right-2 w-2 h-2 rounded-full bg-thrusterOrange animate-pulse" />
           </div>
         </div>
 

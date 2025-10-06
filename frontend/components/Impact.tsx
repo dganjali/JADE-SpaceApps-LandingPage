@@ -4,6 +4,7 @@ import { useEffect, useRef } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { DollarSign, Zap, Globe, Rocket } from 'lucide-react'
+import ProgressBar from './ProgressBar'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -57,6 +58,10 @@ export default function Impact() {
                 Makes satellite operations more sustainable and financially feasible for companies and governments
               </li>
             </ul>
+            <div className="mt-6 space-y-3">
+              <ProgressBar percentage={92} label="Cost Reduction Potential" color="green" delay={200} />
+              <ProgressBar percentage={85} label="ROI Improvement" color="green" delay={400} />
+            </div>
           </div>
 
           {/* Operational Impact */}
@@ -81,6 +86,10 @@ export default function Impact() {
                 Hybrid approach improves efficiency, reliability, and safety
               </li>
             </ul>
+            <div className="mt-6 space-y-3">
+              <ProgressBar percentage={98} label="Service Uptime" color="cyan" delay={200} />
+              <ProgressBar percentage={75} label="Downtime Reduction" color="cyan" delay={400} />
+            </div>
           </div>
 
           {/* Environmental Impact */}
@@ -105,6 +114,10 @@ export default function Impact() {
                 Contributes to sustainable space infrastructure
               </li>
             </ul>
+            <div className="mt-6 space-y-3">
+              <ProgressBar percentage={80} label="Debris Reduction" color="orange" delay={200} />
+              <ProgressBar percentage={65} label="Launch Frequency Reduction" color="orange" delay={400} />
+            </div>
           </div>
 
           {/* Technological Impact */}
@@ -129,6 +142,30 @@ export default function Impact() {
                 Provides proof-of-concept for semi-autonomous repair systems adaptable to other space assets
               </li>
             </ul>
+            <div className="mt-6 space-y-3">
+              <ProgressBar percentage={88} label="Innovation Index" color="green" delay={200} />
+              <ProgressBar percentage={95} label="System Adaptability" color="green" delay={400} />
+            </div>
+          </div>
+        </div>
+
+        {/* Additional Metrics Banner */}
+        <div className="mt-16 grid md:grid-cols-4 gap-4">
+          <div className="bg-gradient-to-br from-successGreen/10 to-white rounded-xl p-6 border-l-4 border-successGreen hover:shadow-lg hover:-translate-y-1 transition-all">
+            <div className="text-3xl font-bold text-successGreen mb-2">$10B+</div>
+            <p className="text-sm text-gray-700">Industry Market Potential</p>
+          </div>
+          <div className="bg-gradient-to-br from-neonCyan/10 to-white rounded-xl p-6 border-l-4 border-neonCyan hover:shadow-lg hover:-translate-y-1 transition-all">
+            <div className="text-3xl font-bold text-neonCyan mb-2">500+</div>
+            <p className="text-sm text-gray-700">Serviceable Satellites by 2030</p>
+          </div>
+          <div className="bg-gradient-to-br from-thrusterOrange/10 to-white rounded-xl p-6 border-l-4 border-thrusterOrange hover:shadow-lg hover:-translate-y-1 transition-all">
+            <div className="text-3xl font-bold text-thrusterOrange mb-2">70%</div>
+            <p className="text-sm text-gray-700">Debris Risk Reduction</p>
+          </div>
+          <div className="bg-gradient-to-br from-successGreen/10 to-white rounded-xl p-6 border-l-4 border-successGreen hover:shadow-lg hover:-translate-y-1 transition-all">
+            <div className="text-3xl font-bold text-successGreen mb-2">2x</div>
+            <p className="text-sm text-gray-700">Average Lifespan Extension</p>
           </div>
         </div>
       </div>

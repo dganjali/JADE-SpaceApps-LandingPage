@@ -127,28 +127,34 @@ export default function RoboticArms() {
 
         {/* Capabilities Grid */}
         <div className="grid md:grid-cols-3 gap-6 mb-16">
-          <div className="arm-card bg-gradient-to-br from-thrusterOrange/10 to-white rounded-xl p-8 border-l-4 border-thrusterOrange hover:shadow-xl transition-all group">
-            <Battery className="w-12 h-12 text-thrusterOrange mb-4 group-hover:rotate-12 transition-transform" />
-            <h3 className="text-xl font-bold text-deepSpace mb-3">Battery Replacement</h3>
-            <p className="text-sm text-gray-700">
+          <div className="arm-card bg-gradient-to-br from-thrusterOrange/10 to-white rounded-xl p-8 border-l-4 border-thrusterOrange hover:shadow-2xl hover:-translate-y-2 transition-all group cursor-pointer tilt-card relative overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-r from-thrusterOrange/0 via-thrusterOrange/5 to-thrusterOrange/0 shimmer" />
+            <Battery className="w-12 h-12 text-thrusterOrange mb-4 group-hover:rotate-12 group-hover:scale-110 transition-all relative z-10" />
+            <h3 className="text-xl font-bold text-deepSpace mb-3 relative z-10">Battery Replacement</h3>
+            <p className="text-sm text-gray-700 relative z-10">
               Remove and replace depleted battery modules to extend satellite operational life by 5-10 years
             </p>
+            <div className="absolute bottom-2 right-2 text-xs font-mono text-thrusterOrange/40">~$500M saved</div>
           </div>
 
-          <div className="arm-card bg-gradient-to-br from-neonCyan/10 to-white rounded-xl p-8 border-l-4 border-neonCyan hover:shadow-xl transition-all group">
-            <Settings className="w-12 h-12 text-neonCyan mb-4 group-hover:rotate-180 transition-transform duration-700" />
-            <h3 className="text-xl font-bold text-deepSpace mb-3">Panel Adjustment</h3>
-            <p className="text-sm text-gray-700">
+          <div className="arm-card bg-gradient-to-br from-neonCyan/10 to-white rounded-xl p-8 border-l-4 border-neonCyan hover:shadow-2xl hover:-translate-y-2 transition-all group cursor-pointer tilt-card relative overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-r from-neonCyan/0 via-neonCyan/5 to-neonCyan/0 shimmer" />
+            <Settings className="w-12 h-12 text-neonCyan mb-4 group-hover:rotate-180 transition-all duration-700 relative z-10" />
+            <h3 className="text-xl font-bold text-deepSpace mb-3 relative z-10">Panel Adjustment</h3>
+            <p className="text-sm text-gray-700 relative z-10">
               Reorient solar panels and antennas for optimal positioning and maximum power generation
             </p>
+            <div className="absolute bottom-2 right-2 text-xs font-mono text-neonCyan/40">+30% efficiency</div>
           </div>
 
-          <div className="arm-card bg-gradient-to-br from-successGreen/10 to-white rounded-xl p-8 border-l-4 border-successGreen hover:shadow-xl transition-all group">
-            <Wrench className="w-12 h-12 text-successGreen mb-4 group-hover:scale-110 transition-transform" />
-            <h3 className="text-xl font-bold text-deepSpace mb-3">Mechanical Repairs</h3>
-            <p className="text-sm text-gray-700">
+          <div className="arm-card bg-gradient-to-br from-successGreen/10 to-white rounded-xl p-8 border-l-4 border-successGreen hover:shadow-2xl hover:-translate-y-2 transition-all group cursor-pointer tilt-card relative overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-r from-successGreen/0 via-successGreen/5 to-successGreen/0 shimmer" />
+            <Wrench className="w-12 h-12 text-successGreen mb-4 group-hover:scale-110 group-hover:rotate-12 transition-all relative z-10" />
+            <h3 className="text-xl font-bold text-deepSpace mb-3 relative z-10">Mechanical Repairs</h3>
+            <p className="text-sm text-gray-700 relative z-10">
               Fix stuck joints, tighten loose bolts, and repair damaged mounting hardware
             </p>
+            <div className="absolute bottom-2 right-2 text-xs font-mono text-successGreen/40">5-10 yr extension</div>
           </div>
         </div>
 

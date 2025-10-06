@@ -88,32 +88,41 @@ export default function MarketBusiness() {
         <div className="market-item mb-16">
           <h3 className="text-3xl font-orbitron font-bold text-center text-softWhite mb-8">Target Market</h3>
           <div className="grid md:grid-cols-3 gap-6">
-            <div className="bg-orbitBlue/40 backdrop-blur-sm rounded-xl p-6 border border-neonCyan/30 text-center hover:border-neonCyan/60 transition-all shadow-lg">
-              <div className="flex justify-center mb-4">
-                <Satellite className="w-12 h-12 text-neonCyan" />
+            <div className="group bg-orbitBlue/40 backdrop-blur-sm rounded-xl p-6 border border-neonCyan/30 text-center hover:border-neonCyan/60 transition-all shadow-lg hover:shadow-2xl hover:-translate-y-2 relative overflow-hidden">
+              <div className="absolute inset-0 shimmer opacity-0 group-hover:opacity-100 transition-opacity" />
+              <div className="flex justify-center mb-4 relative z-10">
+                <div className="p-3 rounded-full bg-neonCyan/10 group-hover:bg-neonCyan/20 transition-all">
+                  <Satellite className="w-12 h-12 text-neonCyan group-hover:rotate-12 transition-transform" />
+                </div>
               </div>
-              <h4 className="text-xl font-semibold text-white mb-3">Commercial Operators</h4>
-              <p className="text-sm text-softWhite">
+              <h4 className="text-xl font-semibold text-white mb-3 relative z-10">Commercial Operators</h4>
+              <p className="text-sm text-softWhite relative z-10">
                 Companies running communication, navigation, or Earth observation satellites. Subscription services for efficient fleet management.
               </p>
             </div>
 
-            <div className="bg-orbitBlue/40 backdrop-blur-sm rounded-xl p-6 border border-successGreen/30 text-center hover:border-successGreen/60 transition-all shadow-lg">
-              <div className="flex justify-center mb-4">
-                <Building2 className="w-12 h-12 text-successGreen" />
+            <div className="group bg-orbitBlue/40 backdrop-blur-sm rounded-xl p-6 border border-successGreen/30 text-center hover:border-successGreen/60 transition-all shadow-lg hover:shadow-2xl hover:-translate-y-2 relative overflow-hidden">
+              <div className="absolute inset-0 shimmer opacity-0 group-hover:opacity-100 transition-opacity" />
+              <div className="flex justify-center mb-4 relative z-10">
+                <div className="p-3 rounded-full bg-successGreen/10 group-hover:bg-successGreen/20 transition-all">
+                  <Building2 className="w-12 h-12 text-successGreen group-hover:scale-110 transition-transform" />
+                </div>
               </div>
-              <h4 className="text-xl font-semibold text-white mb-3">Government Agencies</h4>
-              <p className="text-sm text-softWhite">
+              <h4 className="text-xl font-semibold text-white mb-3 relative z-10">Government Agencies</h4>
+              <p className="text-sm text-softWhite relative z-10">
                 NASA, ESA, CSA requiring continuous operation for research, defense, and environmental monitoring.
               </p>
             </div>
 
-            <div className="bg-orbitBlue/40 backdrop-blur-sm rounded-xl p-6 border border-thrusterOrange/30 text-center hover:border-thrusterOrange/60 transition-all shadow-lg">
-              <div className="flex justify-center mb-4">
-                <Network className="w-12 h-12 text-thrusterOrange" />
+            <div className="group bg-orbitBlue/40 backdrop-blur-sm rounded-xl p-6 border border-thrusterOrange/30 text-center hover:border-thrusterOrange/60 transition-all shadow-lg hover:shadow-2xl hover:-translate-y-2 relative overflow-hidden">
+              <div className="absolute inset-0 shimmer opacity-0 group-hover:opacity-100 transition-opacity" />
+              <div className="flex justify-center mb-4 relative z-10">
+                <div className="p-3 rounded-full bg-thrusterOrange/10 group-hover:bg-thrusterOrange/20 transition-all">
+                  <Network className="w-12 h-12 text-thrusterOrange group-hover:rotate-180 transition-transform duration-500" />
+                </div>
               </div>
-              <h4 className="text-xl font-semibold text-white mb-3">Satellite Constellations</h4>
-              <p className="text-sm text-softWhite">
+              <h4 className="text-xl font-semibold text-white mb-3 relative z-10">Satellite Constellations</h4>
+              <p className="text-sm text-softWhite relative z-10">
                 Large LEO networks (Starlink, OneWeb) with hundreds or thousands of satellites requiring ongoing maintenance.
               </p>
             </div>
@@ -127,17 +136,29 @@ export default function MarketBusiness() {
             {tiers.map((tier, idx) => (
               <div
                 key={idx}
-                className={`bg-orbitBlue/40 backdrop-blur-sm rounded-xl p-8 border-2 ${tier.borderColor} ${tier.bgColor} transition-all hover:scale-105 hover:shadow-2xl`}
+                className={`group bg-orbitBlue/40 backdrop-blur-sm rounded-xl p-8 border-2 ${tier.borderColor} ${tier.bgColor} transition-all hover:scale-105 hover:shadow-2xl relative overflow-hidden ${idx === 1 ? 'md:-translate-y-2 border-4' : ''}`}
               >
-                <div className="text-center mb-6">
+                {/* Best value badge for Pro tier */}
+                {idx === 1 && (
+                  <div className="absolute top-4 right-4 bg-successGreen text-deepSpace text-xs font-bold px-3 py-1 rounded-full animate-pulse">
+                    MOST POPULAR
+                  </div>
+                )}
+                
+                <div className="absolute inset-0 shimmer opacity-0 group-hover:opacity-100 transition-opacity" />
+                
+                <div className="text-center mb-6 relative z-10">
+                  <div className={`w-16 h-16 mx-auto mb-4 rounded-full bg-${tier.color}/20 flex items-center justify-center`}>
+                    <span className={`text-3xl font-bold text-${tier.color}`}>{idx + 1}</span>
+                  </div>
                   <h4 className={`text-2xl font-orbitron font-bold text-${tier.color} uppercase mb-2`}>
                     {tier.name}
                   </h4>
                 </div>
-                <ul className="space-y-3 text-softWhite">
+                <ul className="space-y-3 text-softWhite relative z-10">
                   {tier.features.map((feature, i) => (
-                    <li key={i} className="flex items-start gap-2">
-                      <span className={`text-${tier.color} mt-1`}>✓</span>
+                    <li key={i} className="flex items-start gap-2 hover:translate-x-1 transition-transform">
+                      <span className={`text-${tier.color} mt-1 font-bold`}>✓</span>
                       <span className="text-sm">{feature}</span>
                     </li>
                   ))}

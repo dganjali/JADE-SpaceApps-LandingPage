@@ -57,19 +57,23 @@ export default function ProblemSolution() {
             </div>
             
             <div className="space-y-4 text-white/90 leading-relaxed">
-              <p>
+              <p className="relative pl-6">
+                <span className="absolute left-0 top-1 w-2 h-2 rounded-full bg-warningRed animate-pulse" />
                 There are currently over <span className="text-warningRed font-semibold">10,000 satellites</span> in Low Earth Orbit (LEO) providing essential services such as communications, navigation, Earth observation, and weather monitoring.
               </p>
               
-              <p>
+              <p className="relative pl-6">
+                <span className="absolute left-0 top-1 w-2 h-2 rounded-full bg-warningRed animate-pulse" />
                 Despite their importance, LEO satellites have limited lifespans — typically <span className="text-warningRed font-semibold">5 to 10 years</span>. If even a single critical component fails, the entire satellite becomes dysfunctional.
               </p>
               
-              <p>
+              <p className="relative pl-6">
+                <span className="absolute left-0 top-1 w-2 h-2 rounded-full bg-warningRed animate-pulse" />
                 Each satellite can cost anywhere from <span className="text-warningRed font-semibold">$50 million up to $1 billion</span> to manufacture and launch, making early failures a major financial loss.
               </p>
               
-              <p>
+              <p className="relative pl-6">
+                <span className="absolute left-0 top-1 w-2 h-2 rounded-full bg-warningRed animate-pulse" />
                 Non-functional satellites also contribute to <span className="text-warningRed font-semibold">space debris</span>, increasing collision risks and endangering other satellites.
               </p>
               
