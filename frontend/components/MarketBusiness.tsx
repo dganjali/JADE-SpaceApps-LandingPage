@@ -175,22 +175,34 @@ export default function MarketBusiness() {
         <div className="market-item">
           <h3 className="text-3xl font-orbitron font-bold text-center text-softWhite mb-8">Approach to Sustainability</h3>
           <div className="grid md:grid-cols-3 gap-6">
-            <div className="bg-orbitBlue/40 backdrop-blur-sm rounded-xl p-6 border-l-4 border-thrusterOrange shadow-lg hover:shadow-xl transition-all">
-              <h4 className="text-lg font-semibold text-thrusterOrange mb-3">Environmental</h4>
+            <div className="group bg-orbitBlue/40 backdrop-blur-sm rounded-xl p-6 border-l-4 border-thrusterOrange shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all relative overflow-hidden">
+              <div className="absolute top-0 left-0 w-1 h-0 bg-thrusterOrange group-hover:h-full transition-all duration-500" />
+              <h4 className="text-lg font-semibold text-thrusterOrange mb-3 flex items-center gap-2">
+                <span className="w-2 h-2 bg-thrusterOrange rounded-full animate-pulse" />
+                Environmental
+              </h4>
               <p className="text-sm text-softWhite leading-relaxed">
                 Extending satellite lifespans reduces replacement launches, lowering rocket emissions and minimizing space debris in LEO.
               </p>
             </div>
 
-            <div className="bg-orbitBlue/40 backdrop-blur-sm rounded-xl p-6 border-l-4 border-successGreen shadow-lg hover:shadow-xl transition-all">
-              <h4 className="text-lg font-semibold text-successGreen mb-3">Economic</h4>
+            <div className="group bg-orbitBlue/40 backdrop-blur-sm rounded-xl p-6 border-l-4 border-successGreen shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all relative overflow-hidden">
+              <div className="absolute top-0 left-0 w-1 h-0 bg-successGreen group-hover:h-full transition-all duration-500" />
+              <h4 className="text-lg font-semibold text-successGreen mb-3 flex items-center gap-2">
+                <span className="w-2 h-2 bg-successGreen rounded-full animate-pulse" />
+                Economic
+              </h4>
               <p className="text-sm text-softWhite leading-relaxed">
                 Subscription services provide cost-effective alternatives to replacement satellites, helping operators manage budgets and reduce financial risk.
               </p>
             </div>
 
-            <div className="bg-orbitBlue/40 backdrop-blur-sm rounded-xl p-6 border-l-4 border-neonCyan shadow-lg hover:shadow-xl transition-all">
-              <h4 className="text-lg font-semibold text-neonCyan mb-3">Operational</h4>
+            <div className="group bg-orbitBlue/40 backdrop-blur-sm rounded-xl p-6 border-l-4 border-neonCyan shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all relative overflow-hidden">
+              <div className="absolute top-0 left-0 w-1 h-0 bg-neonCyan group-hover:h-full transition-all duration-500" />
+              <h4 className="text-lg font-semibold text-neonCyan mb-3 flex items-center gap-2">
+                <span className="w-2 h-2 bg-neonCyan rounded-full animate-pulse" />
+                Operational
+              </h4>
               <p className="text-sm text-softWhite leading-relaxed">
                 Robot docks back to recharge and replenish fuel, enabling multiple maintenance cycles without additional launches or generating debris.
               </p>

@@ -75,20 +75,47 @@ function Earth() {
         ))}
       </group>
 
-      {/* Satellite constellation - network of tiny dots */}
-      {Array.from({ length: 80 }).map((_, i) => {
-        const angle = (i / 80) * Math.PI * 2
+      {/* Satellite constellation - orbiting satellites */}
+      <OrbitingSatellites />
+    </group>
+  )
+}
+
+// Orbiting Satellites Component
+function OrbitingSatellites() {
+  const satellitesRef = useRef<THREE.Group[]>([])
+
+  useFrame(({ clock }) => {
+    const time = clock.getElapsedTime()
+    satellitesRef.current.forEach((satellite, i) => {
+      if (satellite) {
+        const orbitSpeed = 0.1 + (i % 3) * 0.05 // Different speeds per orbit
+        const angle = time * orbitSpeed + (i / 80) * Math.PI * 2
         const orbitRadius = 2.6 + (i % 3) * 0.3
         const orbitTilt = Math.sin(i * 0.7) * 0.5
-        return (
-          <mesh
-            key={i}
-            position={[
-              Math.cos(angle) * orbitRadius,
-              orbitTilt,
-              Math.sin(angle) * orbitRadius,
-            ]}
-          >
+        
+        satellite.position.set(
+          Math.cos(angle) * orbitRadius,
+          orbitTilt + Math.sin(angle * 2) * 0.1, // Add subtle vertical oscillation
+          Math.sin(angle) * orbitRadius
+        )
+        
+        // Rotate satellites as they orbit
+        satellite.rotation.y = angle
+      }
+    })
+  })
+
+  return (
+    <group>
+      {Array.from({ length: 80 }).map((_, i) => (
+        <group
+          key={i}
+          ref={(el) => {
+            if (el) satellitesRef.current[i] = el
+          }}
+        >
+          <mesh>
             <sphereGeometry args={[0.02, 8, 8]} />
             <meshStandardMaterial 
               color="#00FFFF" 
@@ -98,8 +125,13 @@ function Earth() {
               opacity={0.9}
             />
           </mesh>
-        )
-      })}
+          {/* Add small trail line behind each satellite */}
+          <mesh position={[-0.05, 0, 0]}>
+            <boxGeometry args={[0.03, 0.005, 0.005]} />
+            <meshBasicMaterial color="#00FFFF" transparent opacity={0.3} />
+          </mesh>
+        </group>
+      ))}
     </group>
   )
 }
