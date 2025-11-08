@@ -4,7 +4,7 @@ from pydantic import BaseModel
 from typing import List, Optional
 import numpy as np
 
-app = FastAPI(title="JADE SpaceApps Mock API")
+app = FastAPI(title="JADE BramHacks2025 Mock API")
 
 
 @app.get('/')

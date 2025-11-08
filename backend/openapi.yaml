@@ -1,6 +1,6 @@
 openapi: 3.0.3
 info:
-  title: JADE SpaceApps Mock API
+  title: JADE BramHacks2025 Mock API
   version: '0.1.0'
 paths:
   /api/v1/predict_rul:

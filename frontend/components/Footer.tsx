@@ -34,12 +34,12 @@ export default function Footer() {
             <div className="text-center">
               <p className="text-mutedGray text-sm mb-2">GitHub</p>
               <a
-                href="https://github.com/dganjali/JADE-SpaceApps"
+                href="https://github.com/dganjali/JADE-BramHacks2025"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-softWhite hover:text-neonCyan transition-colors text-sm"
               >
-                github.com/dganjali/JADE-SpaceApps
+                github.com/dganjali/JADE-BramHacks2025
               </a>
             </div>
           </div>
