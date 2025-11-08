@@ -9,7 +9,7 @@ export default function FloatingBadge() {
         <div className="bg-deepSpace rounded-full px-4 py-2 flex items-center gap-2">
           <Rocket className="w-4 h-4 text-neonCyan" />
           <span className="text-xs font-orbitron font-bold text-white uppercase tracking-wider">
-            Space Apps 2025
+            BramHacks 2025
           </span>
         </div>
       </div>

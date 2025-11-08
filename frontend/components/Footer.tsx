@@ -87,7 +87,7 @@ export default function Footer() {
         {/* Bottom: Copyright */}
         <div className="mt-12 pt-8 border-t border-neonCyan/20 text-center">
           <p className="text-mutedGray text-sm">
-            Developed by <span className="text-neonCyan font-semibold">Team JADE</span> | NASA Space Apps Challenge 2025
+            Developed by <span className="text-neonCyan font-semibold">Team JADE</span> | BramHacks 2025
           </p>
         </div>
       </div>
