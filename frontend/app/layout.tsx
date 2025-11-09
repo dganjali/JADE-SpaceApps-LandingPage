@@ -5,7 +5,7 @@ import { Inter } from 'next/font/google'
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 
 export const metadata = {
-  title: 'JADE | Autonomous Satellite Servicing',
+  title: 'HEIMDALL | Autonomous Satellite Servicing',
   description: 'Predict • Navigate • Repair • Reuse',
   icons: {
     icon: '/favicon.ico',

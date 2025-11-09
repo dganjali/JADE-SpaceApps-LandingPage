@@ -20,7 +20,7 @@ export default function Footer() {
           {/* Left: Project Info */}
           <div>
             <h3 className="text-xl font-orbitron font-bold text-neonCyan mb-3 uppercase">
-              JADE
+              HEIMDALL
             </h3>
             <p className="text-gray-300 text-sm leading-relaxed">
               Autonomous Satellite Servicing System
@@ -34,12 +34,12 @@ export default function Footer() {
             <div className="text-center">
               <p className="text-mutedGray text-sm mb-2">GitHub</p>
               <a
-                href="https://github.com/dganjali/JADE-BramHacks2025"
+                href="https://github.com/dganjali/HEIMDALL-BramHacks2025"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-softWhite hover:text-neonCyan transition-colors text-sm"
               >
-                github.com/dganjali/JADE-BramHacks2025
+                github.com/dganjali/HEIMDALL-BramHacks2025
               </a>
             </div>
           </div>
@@ -87,7 +87,7 @@ export default function Footer() {
         {/* Bottom: Copyright */}
         <div className="mt-12 pt-8 border-t border-neonCyan/20 text-center">
           <p className="text-mutedGray text-sm">
-            Developed by <span className="text-neonCyan font-semibold">Team JADE</span> | BramHacks 2025
+            Developed by <span className="text-neonCyan font-semibold">Team HEIMDALL</span> | BramHacks 2025
           </p>
         </div>
       </div>

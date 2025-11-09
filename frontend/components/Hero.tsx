@@ -330,10 +330,10 @@ export default function Hero(): JSX.Element {
         }}
       >
         <div className="text-center px-6 max-w-5xl">
-          {/* Main Title - JADEarm */}
+          {/* Main Title - HEIMDALL */}
           <div ref={titleRef} className="mb-6">
             <h1 className="text-8xl md:text-9xl font-orbitron font-black leading-tight text-white tracking-wider">
-              {Array.from('JADEarm').map((c, i) => (
+              {Array.from('HEIMDALL').map((c, i) => (
                 <span key={i} className="char inline-block">
                   {c === ' ' ? '\u00A0' : c}
                 </span>
